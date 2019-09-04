@@ -1,0 +1,51 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Graphql Query",
+		"_postman_id": "229cbd7b-ebfd-fdda-cecf-fbe296c1660d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"url": "http://localhost:8080/rest/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\tallBooks\n\t{\n\t\tisbn\n\ttitle\n\tpublisher\n\tauthors\n\tpublishedDate\n\troles\n\n\t}\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Book",
+			"request": {
+				"url": "http://localhost:8080/rest/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\tbook(id:\"1\")\n\t{\n\t\tisbn\n\t\ttitle\n\t\tpublisher\n\t\tauthors\n\t\tpublishedDate\n\t\troles\n\n\t}\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
